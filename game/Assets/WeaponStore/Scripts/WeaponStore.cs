@@ -12,8 +12,9 @@ public class WeaponStore : MonoBehaviour {
 		int offset = 0;
 		foreach (GameObject ob in weaponItems) {
 			
-			ob.transform.Translate (offset, 0, 0);
-			Instantiate (ob,this.transform);
+
+			GameObject gun = Instantiate (ob,this.transform);
+			gun.transform.Translate (offset, 0, 0);
 			offset++;
 		}
 	}
