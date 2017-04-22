@@ -7,10 +7,12 @@ public class Weapon : MonoBehaviour {
 	public float rateOfFire; 
 	public float bulletSpeed;
 	public bool automatic;
+	public int burst;
 	public GameObject bullet;
 
 	private float shootTimerEnd = 0;
 	private bool canShoot = true;
+	private int burstLeft = 0;
 
 
 	// Use this for initialization
@@ -20,17 +22,29 @@ public class Weapon : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		if(burst <= 0){
+			burst = 1;
+		}
+
 		shootTimerEnd -= Time.deltaTime;
 
 		if(!automatic && Input.GetMouseButtonDown(0) && canShoot){
-			Fire ();
+			burstLeft = burst;
 		}else if(automatic && Input.GetMouseButton(0) && canShoot){
-			Fire ();
+			burstLeft = burst;
 		}
 		if(shootTimerEnd <= 0){
 			canShoot = true;
 		}
 	}
+
+	void FixedUpdate(){
+		if(burstLeft > 0){
+			Fire (); 
+		}
+	}
+
 	void Fire(){
 
 		canShoot = false;
@@ -45,6 +59,6 @@ public class Weapon : MonoBehaviour {
 
 		bulletClone.GetComponent<Rigidbody2D> ().velocity = new Vector2 (x,y).normalized * bulletSpeed;
 
-
+		burstLeft--;
 	}
 }
