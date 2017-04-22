@@ -7,7 +7,7 @@ public class BehaviorController : MonoBehaviour {
 
 	public float behaviorSwitchTime;
 	public bool randomizeTime;
-	public MobBehavior afterFollowing, afterIdle;
+	public MobBehavior afterFollowing, afterIdle, afterAttack;
 
 	private MobBehavior state;
 	private Following following;
@@ -48,7 +48,8 @@ public class BehaviorController : MonoBehaviour {
 
 	void ResetTimer(){
 		if (randomizeTime) {
-			behaviorTimer = Random.Range (behaviorSwitchTime - behaviorSwitchTime / 2f, behaviorSwitchTime + behaviorSwitchTime / 2f);
+			var range = behaviorSwitchTime / 2f;
+			behaviorTimer = Random.Range (behaviorSwitchTime - range, behaviorSwitchTime + range);
 		} else {
 			behaviorTimer = behaviorSwitchTime;
 		}
