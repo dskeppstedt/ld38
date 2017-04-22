@@ -5,16 +5,28 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour{
 
 	public MobType mobType;
+	public float life; 
 
-	private Transform defaultParent;
 
 	// Use this for initialization
 	void Start () {
-		defaultParent = transform.parent;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+	}
+
+
+	void OnCollisionEnter2D (Collision2D col){
+		if (col.collider.tag == "Bullet") {
+			life -= col.collider.GetComponent<Bullet> ().damage;
+
+			if (life <= 0) {
+				print ("DE");
+				gameObject.SetActive (false);
+			}
+		}
 	}
 }
