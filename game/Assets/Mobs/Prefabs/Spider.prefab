@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobType: 0
+  life: 10
 --- !u!114 &114574861391035582
 MonoBehaviour:
   m_ObjectHideFlags: 1
