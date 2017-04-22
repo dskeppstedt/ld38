@@ -76,6 +76,7 @@ MonoBehaviour:
   rateOfFire: 0.5
   bulletSpeed: 10
   automatic: 0
+  burst: 1
   bullet: {fileID: 1210456358325376, guid: 96aa7bf606df2427facd541f2fc6411c, type: 2}
 --- !u!212 &212957552722109840
 SpriteRenderer:

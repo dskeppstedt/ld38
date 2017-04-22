@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114319372330902568}
   - component: {fileID: 50657863981553516}
   m_Layer: 0
-  m_Name: Bullet 1
+  m_Name: Pistol bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3f4d91a951745039d5e6a437346ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 10
 --- !u!212 &212005174844343396
 SpriteRenderer:
   m_ObjectHideFlags: 1

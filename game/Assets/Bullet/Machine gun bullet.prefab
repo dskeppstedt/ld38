@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114971256207354462}
   - component: {fileID: 50959160978762798}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Machine gun bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3f4d91a951745039d5e6a437346ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 40
 --- !u!212 &212241196390851364
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.7941176, g: 0.6745168, b: 0.0058391057, a: 1}
+  m_Color: {r: 0.99264705, g: 0.35558107, b: 0.16787411, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
