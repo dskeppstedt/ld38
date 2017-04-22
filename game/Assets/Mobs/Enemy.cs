@@ -24,7 +24,6 @@ public abstract class Enemy : MonoBehaviour{
 			life -= col.collider.GetComponent<Bullet> ().damage;
 
 			if (life <= 0) {
-				print ("DE");
 				gameObject.SetActive (false);
 			}
 		}
