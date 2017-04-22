@@ -8,6 +8,7 @@ public class Following : MonoBehaviour {
 	public float acceleration;
 	public float maxSpeed;
 	public float sampledPositionFrequency;
+	public float samplePositionOvershoot;
 	public bool freezePositionAfterSample;
 
 	private Rigidbody2D rb2d;
@@ -34,7 +35,8 @@ public class Following : MonoBehaviour {
 
 	void SampleTargetPosition(){
 		if (samplePositionTimer < 0) {
-			sampledPosition = following.transform.position;
+			var overshoot = following.GetComponent<Rigidbody2D>().velocity * (1f+samplePositionOvershoot);
+			sampledPosition = (Vector2)following.transform.position + overshoot;
 			if (freezePositionAfterSample) {
 				rb2d.velocity = Vector2.zero;
 			}
