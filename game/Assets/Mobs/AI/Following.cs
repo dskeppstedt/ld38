@@ -7,19 +7,39 @@ public class Following : MonoBehaviour {
 	public Transform following;
 	public float acceleration;
 	public float maxSpeed;
-	private Rigidbody2D rb2d;
+	public float sampledPositionFrequency;
+	public bool freezePositionAfterSample;
 
-	// Use this for initialization
+	private Rigidbody2D rb2d;
+	private Vector2 sampledPosition;
+	private float samplePositionTimer;
+
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
+		samplePositionTimer = sampledPositionFrequency;
 	}
 	
-	// Update is called once per frame
 	void Update () {
+		samplePositionTimer -= Time.deltaTime;
 	}
 
 	void FixedUpdate(){
-		Vector2 direction = (following.position - transform.position).normalized;
+		SampleTargetPosition ();
+		PushTowardsTarget ();
+	}
+
+	void SampleTargetPosition(){
+		if (samplePositionTimer < 0) {
+			sampledPosition = following.transform.position;
+			if (freezePositionAfterSample) {
+				rb2d.velocity = Vector2.zero;
+			}
+			samplePositionTimer = sampledPositionFrequency;
+		}
+	}
+
+	void PushTowardsTarget(){
+		Vector2 direction = (sampledPosition - (Vector2)transform.position).normalized;
 		rb2d.AddForce (direction * acceleration);
 		rb2d.velocity = Vector2.ClampMagnitude (rb2d.velocity, maxSpeed); 
 	}
