@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour {
 
 	public float rateOfFire; 
 	public float bulletSpeed;
+	public bool automatic;
 	public GameObject bullet;
 
 	private float shootTimerEnd = 0;
@@ -21,16 +22,19 @@ public class Weapon : MonoBehaviour {
 	void Update () {
 		shootTimerEnd -= Time.deltaTime;
 
-		if(Input.GetMouseButtonDown(0) && canShoot){
+		if(!automatic && Input.GetMouseButtonDown(0) && canShoot){
 			Fire ();
-			canShoot = false;
-			shootTimerEnd = rateOfFire;
+		}else if(automatic && Input.GetMouseButton(0) && canShoot){
+			Fire ();
 		}
 		if(shootTimerEnd <= 0){
 			canShoot = true;
 		}
 	}
 	void Fire(){
+
+		canShoot = false;
+		shootTimerEnd = rateOfFire;
 
 		Camera.main.GetComponent<CameraFollowObject> ().Shake ();
 		float angle = transform.rotation.eulerAngles.z;
