@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Following : MonoBehaviour {
 
-	public Transform following;
+	public GameObject following;
 	public float acceleration;
 	public float maxSpeed;
 	public float sampledPositionFrequency;
@@ -18,7 +18,11 @@ public class Following : MonoBehaviour {
 		rb2d = GetComponent<Rigidbody2D> ();
 		samplePositionTimer = sampledPositionFrequency;
 	}
-	
+
+	void OnEnable(){
+		samplePositionTimer = 0f;
+	}
+
 	void Update () {
 		samplePositionTimer -= Time.deltaTime;
 	}
