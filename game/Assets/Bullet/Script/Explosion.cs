@@ -10,6 +10,7 @@ public class Explosion : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		//Create the explosion here!
 		Debug.Log ("Explode!");
-
+		GameObject exp = Instantiate (explosion);
+		exp.transform.position = this.transform.position;
 	}
 }

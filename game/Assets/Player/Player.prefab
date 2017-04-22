@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4603238177989330}
   - component: {fileID: 212668763062534710}
   - component: {fileID: 114732169856937900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114904834326424212}
   - component: {fileID: 114145060499355830}
   - component: {fileID: 61406386780353138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -146,6 +146,7 @@ MonoBehaviour:
   rateOfFire: 0.5
   bulletSpeed: 10
   automatic: 1
+  burst: 0
   bullet: {fileID: 1215935869536612, guid: 2faf0d39621384f7d9f51e52a3cb391d, type: 2}
 --- !u!114 &114904834326424212
 MonoBehaviour:

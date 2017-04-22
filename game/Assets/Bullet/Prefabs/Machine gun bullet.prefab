@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 114971256207354462}
   - component: {fileID: 50959160978762798}
   - component: {fileID: 61969801824940624}
-  m_Layer: 0
+  - component: {fileID: 114888441198046966}
+  m_Layer: 9
   m_Name: Machine gun bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,6 +89,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &114888441198046966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215935869536612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14a21d226fbd4f259d3e45f1ed0747a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 1365944304418114, guid: caeb32c90ca5e4f7782822641f203b3a, type: 2}
 --- !u!114 &114971256207354462
 MonoBehaviour:
   m_ObjectHideFlags: 1
