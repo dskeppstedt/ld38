@@ -17,12 +17,12 @@ public class MovementController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		handleInput ();
-		controllMaxSpeed ();
+		HandleInput ();
+		ControllMaxSpeed ();
 	
 	}
 
-	private void handleInput (){
+	private void HandleInput (){
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
@@ -35,7 +35,7 @@ public class MovementController : MonoBehaviour {
 		rigitbody.AddForce (movment * acceleration);
 	}
 
-	private void controllMaxSpeed(){
+	private void ControllMaxSpeed(){
 		if (rigitbody.velocity.magnitude > maxSpeed) {
 			rigitbody.velocity = rigitbody.velocity.normalized * maxSpeed;
 		}
