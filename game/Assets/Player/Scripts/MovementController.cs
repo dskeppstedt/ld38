@@ -18,31 +18,6 @@ public class MovementController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-<<<<<<< HEAD:game/Assets/Player/Scripts/MovementController.cs
-	
-		HandleInput ();
-		ControllMaxSpeed ();
-	
-	}
-		
-	private void HandleInput (){
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-
-		Vector2 movment = new Vector2 (moveHorizontal, moveVertical).normalized;
-
-		if (movment.magnitude == 0) {
-			rigitbody.velocity = new Vector2 (0, 0);
-		}
-
-		rigitbody.AddForce (movment * acceleration);
-	}
-
-	private void ControllMaxSpeed(){
-		if (rigitbody.velocity.magnitude > maxSpeed) {
-			rigitbody.velocity = rigitbody.velocity.normalized * maxSpeed;
-		}
-=======
 		HandleInput ();
 	}
 
@@ -55,7 +30,6 @@ public class MovementController : MonoBehaviour {
 	private void HandleInput (){
 		moveHorizontal = Input.GetAxisRaw ("Horizontal");
 		moveVertical = Input.GetAxisRaw ("Vertical");
->>>>>>> master:game/Assets/Player/Scripts/MovementComponents.cs
 	}
 
 }

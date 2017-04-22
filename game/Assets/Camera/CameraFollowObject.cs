@@ -30,7 +30,7 @@ public class CameraFollowObject : MonoBehaviour {
 		}
 	}
 
-	void Shake(){
+	public void Shake(){
 		shake = true;
 		shakeTimer = shakeTime;
 	}

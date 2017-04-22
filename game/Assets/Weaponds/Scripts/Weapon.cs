@@ -32,6 +32,7 @@ public class Weapon : MonoBehaviour {
 	}
 	void Fire(){
 
+		Camera.main.GetComponent<CameraFollowObject> ().Shake ();
 		float angle = transform.rotation.eulerAngles.z;
 		Bullet bulletClone = Instantiate(bullet, transform.position,transform.rotation).GetComponent<Bullet>();
 		float x = Mathf.Cos (angle * Mathf.Deg2Rad);
