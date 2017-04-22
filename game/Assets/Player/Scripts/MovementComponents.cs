@@ -7,37 +7,29 @@ public class MovementComponents : MonoBehaviour {
 	public float acceleration;
 	public float maxSpeed;
 
-	private Rigidbody2D rigitbody;
+	private Rigidbody2D rb2d;
+	private float moveHorizontal;
+	private float moveVertical;
 
 	// Use this for initialization
 	void Start () {
-		rigitbody = GetComponent<Rigidbody2D> ();
+		rb2d = GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
-		handleInput ();
-		controllMaxSpeed ();
-	
+		HandleInput ();
 	}
 
-	private void handleInput (){
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-
-		Vector2 movment = new Vector2 (moveHorizontal, moveVertical).normalized;
-
-		if (movment.magnitude == 0) {
-			rigitbody.velocity = new Vector2 (0, 0);
-		}
-
-		rigitbody.AddForce (movment * acceleration);
+	void FixedUpdate(){
+		Vector2 movement = new Vector2 (moveHorizontal, moveVertical).normalized;
+		rb2d.AddForce (movement * acceleration);
+		rb2d.velocity = Vector2.ClampMagnitude (rb2d.velocity, maxSpeed);
 	}
 
-	private void controllMaxSpeed(){
-		if (rigitbody.velocity.magnitude > maxSpeed) {
-			rigitbody.velocity = rigitbody.velocity.normalized * maxSpeed;
-		}
+	private void HandleInput (){
+		moveHorizontal = Input.GetAxisRaw ("Horizontal");
+		moveVertical = Input.GetAxisRaw ("Vertical");
 	}
+
 }
