@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour {
 	public bool automatic;
 	public int burst;
 	public GameObject bullet;
+	public AudioClip sound;
 
 	private float shootTimerEnd = 0;
 	private bool canShoot = true;
@@ -49,7 +50,7 @@ public class Weapon : MonoBehaviour {
 
 		canShoot = false;
 		shootTimerEnd = rateOfFire;
-
+		GetComponent<AudioSource> ().PlayOneShot (sound);
 		Camera.main.GetComponent<CameraFollowObject> ().Shake ();
 		float angle = transform.rotation.eulerAngles.z;
 		Bullet bulletClone = Instantiate(bullet, transform.position,transform.rotation).GetComponent<Bullet>();

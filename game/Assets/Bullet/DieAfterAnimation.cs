@@ -5,6 +5,11 @@ using UnityEngine;
 public class DieAfterAnimation : MonoBehaviour {
 
 	public void Die() {
-		Destroy (this.gameObject);
+		var audioSource = GetComponent<AudioSource> ();
+		if (audioSource != null && GetComponent<AudioSource> ().isPlaying) {
+			Invoke("Die", 1f);
+		} else {
+			Destroy (this.gameObject);
+		}
 	}
 }
