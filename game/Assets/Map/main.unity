@@ -455,6 +455,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 1834232505}
+  shakeTime: 1
+  shakeAmplitude: 0.2
 --- !u!1 &1834232501 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1024427751224774, guid: 8d7ec659b8776462b8eefc37a10ea234,
