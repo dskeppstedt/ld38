@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour{
-
-	public MobType mobType;
-
-	private Transform defaultParent;
+public class Spider : Enemy {
 
 	// Use this for initialization
 	void Start () {
-		defaultParent = transform.parent;
+		GetComponent<Following> ().following = GameObject.FindGameObjectWithTag ("Player");
 	}
 	
 	// Update is called once per frame

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MobSpawner : MonoBehaviour {
 
 	public Transform[] spawnPoints;
+	public GameObject player;
 	public Enemy[] enemyTypes;
 	public float enemySpawnTime;
 	public bool randomizeTime;
@@ -18,10 +19,11 @@ public class MobSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		player = GameObject.FindGameObjectWithTag ("Player");
 		enemySpawnTimer = enemySpawnTime;
 		pools = new GameObject ();
 		pools.transform.parent = this.transform;
-		enemyPools = new Dictionary<MobType, Enemy[]> ();
+		InitPools ();
 	}
 	
 	// Update is called once per frame
@@ -37,6 +39,7 @@ public class MobSpawner : MonoBehaviour {
 		Enemy e = GetEnemy (m);
 		e.transform.position = t.position;
 		e.gameObject.SetActive (true);
+		enemySpawnTimer = enemySpawnTime;
 	}
 
 	Enemy GetEnemy(MobType m){
@@ -51,6 +54,7 @@ public class MobSpawner : MonoBehaviour {
 	}
 
 	void InitPools(){
+		enemyPools = new Dictionary<MobType, Enemy[]> ();
 		foreach (Enemy e in enemyTypes) {
 			MobType m = e.mobType;
 			GameObject poolParentObject = new GameObject (e.mobType.ToString());
