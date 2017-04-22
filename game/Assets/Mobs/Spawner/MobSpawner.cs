@@ -21,7 +21,7 @@ public class MobSpawner : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		enemySpawnTimer = enemySpawnTime;
-		pools = new GameObject ();
+		pools = new GameObject ("Pools");
 		pools.transform.parent = this.transform;
 		InitPools ();
 	}
@@ -58,7 +58,7 @@ public class MobSpawner : MonoBehaviour {
 		foreach (Enemy e in enemyTypes) {
 			MobType m = e.mobType;
 			GameObject poolParentObject = new GameObject (e.mobType.ToString());
-			poolParentObject.transform.parent = this.transform;
+			poolParentObject.transform.parent = pools.transform;
 			Enemy[] pool = new Enemy[poolSize];
 			for(int i = 0; i < poolSize; i++){
 				pool [i] = Instantiate (e, poolParentObject.transform);
