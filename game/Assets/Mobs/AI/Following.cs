@@ -9,15 +9,18 @@ public class Following : MonoBehaviour {
 	public float maxSpeed;
 	public float sampledPositionFrequency;
 	public float samplePositionOvershoot;
+	public float minDeltaDistance;
 	public bool freezePositionAfterSample;
 
 	private Rigidbody2D rb2d;
 	private Vector2 sampledPosition;
 	private float samplePositionTimer;
+	private float currentMaxSpeed;
 
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		samplePositionTimer = sampledPositionFrequency;
+		currentMaxSpeed = maxSpeed;
 	}
 
 	void OnEnable(){
@@ -30,23 +33,28 @@ public class Following : MonoBehaviour {
 
 	void FixedUpdate(){
 		SampleTargetPosition ();
-		PushTowardsTarget ();
+		var deltaDistance = ((Vector2)transform.position - sampledPosition).magnitude;
+		if (deltaDistance > minDeltaDistance) {
+			PushTowardsTarget ();
+		} 
 	}
 
 	void SampleTargetPosition(){
 		if (samplePositionTimer < 0) {
-			var overshoot = following.GetComponent<Rigidbody2D>().velocity * (1f+samplePositionOvershoot);
+			var overshoot = Vector2.zero;
+			if (samplePositionOvershoot > 0) {
+				overshoot = following.GetComponent<Rigidbody2D> ().velocity * (1f + samplePositionOvershoot);
+			}
 			sampledPosition = (Vector2)following.transform.position + overshoot;
 			if (freezePositionAfterSample) {
 				rb2d.velocity = Vector2.zero;
 			}
-			samplePositionTimer = sampledPositionFrequency;
 		}
 	}
 
 	void PushTowardsTarget(){
 		Vector2 direction = (sampledPosition - (Vector2)transform.position).normalized;
 		rb2d.AddForce (direction * acceleration);
-		rb2d.velocity = Vector2.ClampMagnitude (rb2d.velocity, maxSpeed); 
+		rb2d.velocity = Vector2.ClampMagnitude (rb2d.velocity, currentMaxSpeed); 
 	}
 }
