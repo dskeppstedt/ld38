@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementComponents : MonoBehaviour {
+public class MovementController : MonoBehaviour {
 
 	public float acceleration;
 	public float maxSpeed;
