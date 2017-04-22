@@ -108,6 +108,48 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &404921152
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4402515838982346, guid: c66c2b91ae2104fb69f428eda4ce5815, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402515838982346, guid: c66c2b91ae2104fb69f428eda4ce5815, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402515838982346, guid: c66c2b91ae2104fb69f428eda4ce5815, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402515838982346, guid: c66c2b91ae2104fb69f428eda4ce5815, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402515838982346, guid: c66c2b91ae2104fb69f428eda4ce5815, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402515838982346, guid: c66c2b91ae2104fb69f428eda4ce5815, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402515838982346, guid: c66c2b91ae2104fb69f428eda4ce5815, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402515838982346, guid: c66c2b91ae2104fb69f428eda4ce5815, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c66c2b91ae2104fb69f428eda4ce5815, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &633488732
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +234,7 @@ GameObject:
   - component: {fileID: 1374186866}
   - component: {fileID: 1374186865}
   - component: {fileID: 1374186864}
+  - component: {fileID: 1374186867}
   m_Layer: 0
   m_Name: Room1
   m_TagString: Untagged
@@ -241,6 +284,10 @@ PolygonCollider2D:
       - {x: -7.6133933, y: 1.0460846}
       - {x: -4.010559, y: 1.0594056}
       - {x: -3.9313388, y: 7.8365154}
+      - {x: -3.8833084, y: 6.7538815}
+      - {x: -1.34732, y: 6.773671}
+      - {x: -0.9843067, y: 7.0135536}
+      - {x: 1.531157, y: 7.046669}
       - {x: 1.5329885, y: 7.832015}
       - {x: 1.6029605, y: 2.57145}
       - {x: 3.9120848, y: 2.6731765}
@@ -279,8 +326,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 1}
-      - {x: 0.006952891, y: 3.0429056}
-      - {x: -1.6013006, y: 3.038449}
+      - {x: -0.0130335, y: 3.8423445}
+      - {x: -1.5813142, y: 3.8378885}
       - {x: -1.5823126, y: -0.53683734}
       - {x: -3.189213, y: -0.5441811}
       - {x: -3.18869, y: -2.1877818}
@@ -299,8 +346,33 @@ Transform:
   m_Children:
   - {fileID: 633488734}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1374186867
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1374186863}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.9843209, y: 5.6769066}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.880567, y: 0.4183483}
+  m_EdgeRadius: 0
 --- !u!1001 &1611560153
 Prefab:
   m_ObjectHideFlags: 0
@@ -338,7 +410,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4058216073699862, guid: 8d7ec659b8776462b8eefc37a10ea234, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 50747032235227460, guid: 8d7ec659b8776462b8eefc37a10ea234, type: 2}
