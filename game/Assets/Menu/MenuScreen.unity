@@ -930,8 +930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b0c77397e99b4ddd93276772a92e25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: green
-  delay: 1.3
+  scene: Map/main
+  delay: 1
 --- !u!4 &1471039961
 Transform:
   m_ObjectHideFlags: 0
