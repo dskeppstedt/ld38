@@ -10,8 +10,6 @@ public class Bullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this.gameObject.AddComponent<BulletCollision> ();
-		Debug.Log ("Hello");
-
 	}
 	
 	// Update is called once per frame
