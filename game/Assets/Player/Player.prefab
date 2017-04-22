@@ -211,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 100
   maxSpeed: 2
+  bodySprites: []
 --- !u!212 &212372657542032600
 SpriteRenderer:
   m_ObjectHideFlags: 1
