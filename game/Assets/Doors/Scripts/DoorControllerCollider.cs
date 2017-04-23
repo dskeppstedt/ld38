@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class DoorControllerCollider:MonoBehaviour{
 
-	[HideInInspector]
+	//[HideInInspector]
 	public bool active = false;
 
 	void OnTriggerEnter2D(Collider2D other) {
@@ -14,6 +14,9 @@ public class DoorControllerCollider:MonoBehaviour{
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		active = !(other.tag == "Player");
+		if (other.tag == "Player") {
+			active = false;
+		}
+
 	}
 }
