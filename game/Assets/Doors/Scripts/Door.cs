@@ -26,9 +26,11 @@ public class Door : MonoBehaviour {
 
 	public void SetClose(){
 		open = false;
+		GetComponent<SpriteRenderer> ().sortingOrder = 1;
 	}
 
 	public void SetOpen(){
 		open = true;
+		GetComponent<SpriteRenderer> ().sortingOrder = -10;
 	}
 }
