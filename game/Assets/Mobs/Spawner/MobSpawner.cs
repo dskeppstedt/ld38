@@ -39,6 +39,7 @@ public class MobSpawner : MonoBehaviour {
 		Enemy e = GetEnemy (m);
 		e.transform.position = t.position;
 		e.gameObject.SetActive (true);
+		e.GetComponent<RotateToward> ().target = player;
 		enemySpawnTimer = enemySpawnTime;
 	}
 

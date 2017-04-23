@@ -6,7 +6,6 @@ public abstract class Enemy : MonoBehaviour{
 
 	public MobType mobType;
 	public float life; 
-	public float damage = 1;
 	public int energy;
 	private Energy playerEnergy;
 
@@ -25,6 +24,9 @@ public abstract class Enemy : MonoBehaviour{
 	void OnCollisionEnter2D (Collision2D col){
 		if (col.collider.tag == "Bullet") {
 			life -= col.collider.GetComponent<Bullet> ().damage;
+			Vector2 dir = (this.transform.position - col.transform.position).normalized;
+
+			GetComponent<Rigidbody2D> ().AddForce (dir * 15, ForceMode2D.Impulse);
 
 			if (life <= 0) {
 				gameObject.SetActive (false);
