@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 114311571619300882}
   - component: {fileID: 114574861391035582}
   - component: {fileID: 114483918572931734}
+  - component: {fileID: 114078245124182314}
+  - component: {fileID: 114789882178295586}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -39,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1450464286907824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.72, z: 0}
+  m_LocalPosition: {x: 7.23, y: 0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,8 +58,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 2
+  m_LinearDrag: 5
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -81,7 +83,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.76, y: 0.73}
+    oldSize: {x: 0.73, y: 0.76}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -90,6 +92,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &114078245124182314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450464286907824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d6123fafa574fca94f8ecf73b8fd69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!114 &114311571619300882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,6 +135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mobType: 0
   life: 10
+  damage: 5
+  energy: 25
 --- !u!114 &114574861391035582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,6 +153,19 @@ MonoBehaviour:
   afterFollowing: 0
   afterIdle: 0
   afterAttack: 0
+--- !u!114 &114789882178295586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450464286907824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49266931781044fe8d33b38256f63d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  cooldown: 1
 --- !u!212 &212829680566846982
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -167,7 +196,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 755233729
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5bf8ff8c3335d420ab2a701ccafb5c85, type: 3}
   m_Color: {r: 0.9749654, g: 1, b: 0.98325264, a: 1}
