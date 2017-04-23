@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class DoorControllerOpener : DoorController, Opener {
 
-	DoorControllerCollider trigger;
-
-	void Start () {
-		trigger = GetComponent<DoorControllerCollider> ();
-	}
-
 	void Update () {
 		if (trigger.active && Input.GetButtonDown("Action")) {
 			OpenAllDoors ();
