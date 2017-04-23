@@ -103,8 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49266931781044fe8d33b38256f63d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 35
-  cooldown: 2.25
+  damage: 40
+  cooldown: 2
 --- !u!114 &114726406964509728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,8 +117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobType: 0
-  life: 30
-  energy: 30
+  life: 25
+  energy: 20
 --- !u!114 &114855937397429386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   following: {fileID: 0}
-  acceleration: 10
-  maxSpeed: 3
+  acceleration: 12
+  maxSpeed: 4
   sampledPositionFrequency: 1
   samplePositionOvershoot: 0
   minDeltaDistance: 0.1
