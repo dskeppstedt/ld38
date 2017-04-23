@@ -45,6 +45,9 @@ TagManager:
   - name: Background
     uniqueID: 4042466573
     locked: 0
+  - name: Props
+    uniqueID: 487028561
+    locked: 0
   - name: Player
     uniqueID: 755233729
     locked: 0
