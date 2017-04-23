@@ -5,7 +5,8 @@ using UnityEngine;
 public class Spider : Enemy {
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
+		base.Start();
 		GetComponent<Following> ().following = GameObject.FindGameObjectWithTag ("Player");
 	}
 	

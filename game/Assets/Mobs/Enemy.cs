@@ -6,11 +6,14 @@ public abstract class Enemy : MonoBehaviour{
 
 	public MobType mobType;
 	public float life; 
+	public float damage = 1;
+	public int energy;
+	private Energy playerEnergy;
 
 
 	// Use this for initialization
-	void Start () {
-
+	public void Start () {
+		playerEnergy = GameObject.FindGameObjectWithTag ("Player").GetComponent<Energy>();
 	}
 	
 	// Update is called once per frame
@@ -25,6 +28,7 @@ public abstract class Enemy : MonoBehaviour{
 
 			if (life <= 0) {
 				gameObject.SetActive (false);
+				playerEnergy.IncreaseEnergy (energy);
 			}
 		}
 	}

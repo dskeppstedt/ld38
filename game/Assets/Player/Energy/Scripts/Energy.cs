@@ -13,13 +13,12 @@ public class Energy : MonoBehaviour {
 		this.energy = initialEnergy;
 	}
 
-	public bool ReduceEnergy(int amount) {
-		if (energy - amount < 0) {
-			return false;
-		}
-
+	public void ReduceEnergy(int amount) {
 		energy -= amount;
-		return true;
+	}
+
+	public void IncreaseEnergy(int amount) {
+		energy += amount;
 	}
 
 	public bool hasEnergy() {
