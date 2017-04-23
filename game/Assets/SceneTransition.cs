@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour {
 
@@ -14,7 +15,7 @@ public class SceneTransition : MonoBehaviour {
 
 	IEnumerator SwitchScene () {
 		yield return new WaitForSeconds (delay);
-		Application.LoadLevel (scene); //TODO: Update to SceneManager
+		SceneManager.LoadScene (scene);
 	}
 
 }
