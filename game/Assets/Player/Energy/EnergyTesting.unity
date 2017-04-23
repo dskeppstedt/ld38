@@ -213,41 +213,11 @@ Prefab:
       propertyPath: m_Name
       value: Spider E
       objectReference: {fileID: 0}
-    - target: {fileID: 114483918572931734, guid: 2b155d7117b7a48979229852e28e8d64,
+    - target: {fileID: 114078245124182314, guid: 2b155d7117b7a48979229852e28e8d64,
         type: 2}
-      propertyPath: damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114574861391035582, guid: 2b155d7117b7a48979229852e28e8d64,
-        type: 2}
-      propertyPath: behaviorSwitchTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114574861391035582, guid: 2b155d7117b7a48979229852e28e8d64,
-        type: 2}
-      propertyPath: randomizeTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114574861391035582, guid: 2b155d7117b7a48979229852e28e8d64,
-        type: 2}
-      propertyPath: afterFollowing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50067481294907112, guid: 2b155d7117b7a48979229852e28e8d64,
-        type: 2}
-      propertyPath: m_Mass
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 50067481294907112, guid: 2b155d7117b7a48979229852e28e8d64,
-        type: 2}
-      propertyPath: m_LinearDrag
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114483918572931734, guid: 2b155d7117b7a48979229852e28e8d64,
-        type: 2}
-      propertyPath: energy
-      value: 25
-      objectReference: {fileID: 0}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1397571612}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b155d7117b7a48979229852e28e8d64, type: 2}
   m_IsPrefabParent: 0
@@ -402,36 +372,6 @@ MonoBehaviour:
   t: {fileID: 1397571618}
   shakeTime: 0
   shakeAmplitude: 0
---- !u!1 &656744837 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1450464286907824, guid: 2b155d7117b7a48979229852e28e8d64,
-    type: 2}
-  m_PrefabInternal: {fileID: 215080442}
---- !u!114 &656744838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 656744837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46d6123fafa574fca94f8ecf73b8fd69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1397571612}
---- !u!114 &656744846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 656744837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f49266931781044fe8d33b38256f63d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  cooldown: 1
 --- !u!1 &834802450
 GameObject:
   m_ObjectHideFlags: 0
