@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponHandler : MonoBehaviour {
 
-	public GameObject weapon;
+	public GameObject gunController;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +17,7 @@ public class WeaponHandler : MonoBehaviour {
 		Vector2 dir = GetComponent<MovementController> ().getDir ();
 	
 
-		weapon.transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Rad2Deg * Mathf.Atan2(dir.y,dir.x)));
+		gunController.transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Rad2Deg * Mathf.Atan2(dir.y,dir.x)));
 
 	}
 }

@@ -6,7 +6,6 @@ public class MovementController : MonoBehaviour {
 
 	public float acceleration;
 	public float maxSpeed;
-	public Sprite[] bodySprites;
 
 	private Rigidbody2D rb2d;
 	private float moveHorizontal;
@@ -32,14 +31,7 @@ public class MovementController : MonoBehaviour {
 	void HandleSprite(){
 
 		float deg = Mathf.Rad2Deg * Mathf.Atan2 (dir.y, dir.x);
-
-		if (deg < 180 && deg > 0) {
-			GetComponent<SpriteRenderer> ().sprite = bodySprites [1];
-			transform.rotation = Quaternion.Euler (new Vector3 (0, 0, deg));
-		} else {
-			GetComponent<SpriteRenderer> ().sprite = bodySprites [0];
-			transform.rotation = Quaternion.Euler (new Vector3 (0, 0, deg));
-		}
+		transform.rotation = Quaternion.Euler (new Vector3 (0, 0, deg));
 	}
 
 	void FixedUpdate(){
