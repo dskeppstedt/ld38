@@ -115,11 +115,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114798724690162558, guid: 31d3eba34fc4a4bb1b1945ce0df864a9,
-        type: 2}
-      propertyPath: weapons.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4323815798905842, guid: 31d3eba34fc4a4bb1b1945ce0df864a9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -151,36 +146,6 @@ Prefab:
     - target: {fileID: 4323815798905842, guid: 31d3eba34fc4a4bb1b1945ce0df864a9, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114798724690162558, guid: 31d3eba34fc4a4bb1b1945ce0df864a9,
-        type: 2}
-      propertyPath: weapons.Array.data[0]
-      value: 
-      objectReference: {fileID: 114639608766388154, guid: 19257d32f204f4dd19fb49ace38f2217,
-        type: 2}
-    - target: {fileID: 114798724690162558, guid: 31d3eba34fc4a4bb1b1945ce0df864a9,
-        type: 2}
-      propertyPath: weapons.Array.data[1]
-      value: 
-      objectReference: {fileID: 114106073278034660, guid: b0e33592b9a6b498bb499f8b9e6a8bbc,
-        type: 2}
-    - target: {fileID: 114798724690162558, guid: 31d3eba34fc4a4bb1b1945ce0df864a9,
-        type: 2}
-      propertyPath: weapons.Array.data[2]
-      value: 
-      objectReference: {fileID: 114131449348330906, guid: 40b2be927a6b44ae695c9a6c7dcee9a8,
-        type: 2}
-    - target: {fileID: 1251916643860810, guid: 31d3eba34fc4a4bb1b1945ce0df864a9, type: 2}
-      propertyPath: m_TagString
-      value: Room
-      objectReference: {fileID: 0}
-    - target: {fileID: 1484246316342082, guid: 31d3eba34fc4a4bb1b1945ce0df864a9, type: 2}
-      propertyPath: m_TagString
-      value: Room
-      objectReference: {fileID: 0}
-    - target: {fileID: 1843324322751948, guid: 31d3eba34fc4a4bb1b1945ce0df864a9, type: 2}
-      propertyPath: m_TagString
-      value: Room
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d3eba34fc4a4bb1b1945ce0df864a9, type: 2}
