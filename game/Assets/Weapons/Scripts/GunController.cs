@@ -36,7 +36,8 @@ public class GunController : MonoBehaviour {
 					FireSFX ();
 				}
 				burstLeft = currentWeapon.burst;
-			} else if (currentWeapon.automatic && Input.GetMouseButtonUp (0)) {
+			}
+			if (currentWeapon.automatic && currentWeapon.burst < 2 && Input.GetMouseButtonUp (0)) {
 				if (audioSrc.isPlaying) {
 					audioSrc.Stop ();
 				}
@@ -92,18 +93,18 @@ public class GunController : MonoBehaviour {
 	}
 
 	void FireSFX(){
+		// Superhaxx to handle voice-stealing
 		if (currentWeapon.sound == audioSrc.clip) {
-			if (currentWeapon.burst > 1 && audioSrc.isPlaying) {
+			if (currentWeapon.burst > 1 && burstLeft < currentWeapon.burst) {
 				return;
 			}
 			if (currentWeapon.automatic && audioSrc.isPlaying) {
 				return;
 			}
 		}
-		Debug.Log ("FIRIING!");
 		audioSrc.Stop ();
 		audioSrc.clip = currentWeapon.sound;
-		audioSrc.loop = currentWeapon.automatic;
+		audioSrc.loop = currentWeapon.automatic && currentWeapon.burst < 2;
 		audioSrc.time = 0f;
 		audioSrc.Play ();
 	}

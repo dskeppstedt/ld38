@@ -152,6 +152,16 @@ Prefab:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 82186988006669718, guid: 31d3eba34fc4a4bb1b1945ce0df864a9,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82186988006669718, guid: 31d3eba34fc4a4bb1b1945ce0df864a9,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31d3eba34fc4a4bb1b1945ce0df864a9, type: 2}
   m_IsPrefabParent: 0
