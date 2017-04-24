@@ -6,10 +6,11 @@ public class Door : MonoBehaviour {
 
 	public bool open;
 	Animator anim;
+	private SpriteRenderer sr;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
-		
+		sr = GetComponent<SpriteRenderer> ();
 	}
 
 	public void OpenDoor() {
@@ -26,11 +27,11 @@ public class Door : MonoBehaviour {
 
 	public void SetClose(){
 		open = false;
-		GetComponent<SpriteRenderer> ().sortingOrder = 1;
+		sr.sortingOrder = 1;
 	}
 
 	public void SetOpen(){
 		open = true;
-		GetComponent<SpriteRenderer> ().sortingOrder = -10;
+		sr.sortingOrder = -10;
 	}
 }

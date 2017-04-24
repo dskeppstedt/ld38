@@ -138,4 +138,4 @@ MonoBehaviour:
   automatic: 1
   burst: 1
   bullet: {fileID: 1215935869536612, guid: 2faf0d39621384f7d9f51e52a3cb391d, type: 2}
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: a1d5a99ce475c48b98f5103b8e649c5d, type: 3}
