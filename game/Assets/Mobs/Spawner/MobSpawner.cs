@@ -38,6 +38,7 @@ public class MobSpawner : MonoBehaviour {
 		Transform t = spawnPoints [Random.Range (0, spawnPoints.Length)];
 		Enemy e = GetEnemy (m);
 		e.Reset ();
+		e.GetComponent<SpriteRenderer> ().color = new Color (Random.Range (0.0f, 1.0f), Random.Range (0.0f, 1.0f), Random.Range (0.0f, 1.0f));
 		e.transform.position = t.position;
 		e.gameObject.SetActive (true);
 		e.GetComponent<RotateToward> ().target = player;
