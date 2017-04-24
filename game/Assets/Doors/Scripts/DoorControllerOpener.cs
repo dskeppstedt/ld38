@@ -18,5 +18,6 @@ public class DoorControllerOpener : DoorController, Opener {
 
 	public void Open(Door door){
 		door.OpenDoor ();
+		this.gameObject.GetComponentInChildren<Interactable> ().SetColor (Color.green);
 	}
 }
