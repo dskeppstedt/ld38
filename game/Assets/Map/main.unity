@@ -1191,7 +1191,7 @@ GameObject:
   - component: {fileID: 497525044}
   m_Layer: 0
   m_Name: Room2
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2257,76 +2257,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
-      value: -0.21772194
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
-      value: -0.18228483
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: -0.007794142
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
-      value: -0.22660828
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
-      value: 0.21982384
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
-      value: -0.06895256
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].x
-      value: 0.14514732
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].y
-      value: 0.16126823
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
-      value: -0.001783371
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
-      value: 0.2201047
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].x
-      value: 0.21219063
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].y
-      value: -0.02394104
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].x
-      value: 0.1368885
-      objectReference: {fileID: 0}
-    - target: {fileID: 60538838701601026, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].y
-      value: -0.15508819
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d7ec659b8776462b8eefc37a10ea234, type: 2}
   m_IsPrefabParent: 0
@@ -2967,7 +2897,7 @@ GameObject:
   - component: {fileID: 1374186869}
   m_Layer: 0
   m_Name: Room1
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

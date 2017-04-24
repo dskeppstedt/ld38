@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - PlayerDamage
+  - Room
   layers:
   - Default
   - TransparentFX
