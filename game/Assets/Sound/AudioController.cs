@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 public class AudioController : MonoBehaviour {
 
 	public AudioMixer main;
-	public AudioMixerSnapshot soundOn, soundOff;
+	public AudioMixerSnapshot soundOn, soundOff, soundInit;
 	private bool muted;
 
 	void Start(){
