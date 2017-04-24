@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounce: 0
   damage: 40
-  kickback: 2
+  kickback: 5
 --- !u!212 &212241196390851364
 SpriteRenderer:
   m_ObjectHideFlags: 1

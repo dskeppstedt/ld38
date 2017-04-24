@@ -101,8 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounce: 0
-  damage: 12
-  kickback: 0.5
+  damage: 10
+  kickback: 3
 --- !u!114 &114765006622866902
 MonoBehaviour:
   m_ObjectHideFlags: 1
