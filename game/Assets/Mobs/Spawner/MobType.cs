@@ -1,1 +1,1 @@
-﻿public enum MobType { Basic }
+﻿public enum MobType { Basic, Small }
