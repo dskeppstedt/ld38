@@ -18,9 +18,11 @@ public class DoorControllerOpenClose : DoorController,Opener,Closer {
 
 	public void Open(Door door){
 		door.OpenDoor ();
+		this.gameObject.GetComponentInChildren<Interactable> ().SetColor (Color.green);
 	}
 
 	public void Close(Door door){
 		door.CloseDoor();
+		this.gameObject.GetComponentInChildren<Interactable> ().SetColor (Color.white);
 	}
 }
