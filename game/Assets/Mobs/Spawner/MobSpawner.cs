@@ -37,6 +37,7 @@ public class MobSpawner : MonoBehaviour {
 	void SpawnEnemy(MobType m){
 		Transform t = spawnPoints [Random.Range (0, spawnPoints.Length)];
 		Enemy e = GetEnemy (m);
+		e.Reset ();
 		e.transform.position = t.position;
 		e.gameObject.SetActive (true);
 		e.GetComponent<RotateToward> ().target = player;

@@ -9,9 +9,14 @@ public class Spider : Enemy {
 		base.Start();
 		GetComponent<Following> ().following = GameObject.FindGameObjectWithTag ("Player");
 	}
-	
+
+
 	// Update is called once per frame
 	void Update () {
-		
+		if (life < 0) {
+			GetComponent<SplatterSpawner> ().SpawnSplatter ();
+		}
+
+
 	}
 }

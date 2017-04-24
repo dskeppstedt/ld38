@@ -9,17 +9,27 @@ public abstract class Enemy : MonoBehaviour{
 	public int energy;
 	private Energy playerEnergy;
 
+	private float _life;
+
 
 	// Use this for initialization
 	public void Start () {
+		_life = life;
 		playerEnergy = GameObject.FindGameObjectWithTag ("Player").GetComponent<Energy>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
+	public void Reset() {
+		life = _life;
 	}
 
+	private void Die() {
+		playerEnergy.IncreaseEnergy (energy);
+		StartCoroutine ("deactivate");
+	}
+	IEnumerator deactivate() {
+		yield return new WaitForEndOfFrame();
+		gameObject.SetActive (false);
+	}
 
 	void OnCollisionEnter2D (Collision2D col){
 		if (col.collider.tag == "Bullet") {
@@ -29,8 +39,7 @@ public abstract class Enemy : MonoBehaviour{
 			GetComponent<Rigidbody2D> ().AddForce (dir * 15, ForceMode2D.Impulse);
 
 			if (life <= 0) {
-				gameObject.SetActive (false);
-				playerEnergy.IncreaseEnergy (energy);
+				Die ();
 			}
 		}
 	}
