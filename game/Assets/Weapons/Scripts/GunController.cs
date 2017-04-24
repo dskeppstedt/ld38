@@ -48,16 +48,6 @@ public class GunController : MonoBehaviour {
 		}
 
 		//cheats
-		if(Input.GetKey(KeyCode.Alpha1)){
-			EquipWeapon (0);
-		}
-		if(Input.GetKey(KeyCode.Alpha2)){
-			EquipWeapon (1);
-		}
-		if(Input.GetKey(KeyCode.Alpha3)){
-			EquipWeapon (2);
-		}
-		
 
 	}
 
