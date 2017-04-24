@@ -19,8 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4448852909695008}
+  - component: {fileID: 114968023114725290}
   m_Layer: 0
-  m_Name: GunParent
+  m_Name: GunController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,24 +64,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1994252374436146
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4227624097694606}
-  - component: {fileID: 212372657542032600}
-  - component: {fileID: 114520725081563994}
-  - component: {fileID: 82609010600410866}
-  m_Layer: 0
-  m_Name: Pistol
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &4058216073699862
 Transform:
   m_ObjectHideFlags: 1
@@ -88,25 +71,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1953233183401590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.71, y: 3.71, z: 0}
+  m_LocalPosition: {x: -18.816, y: 3.604, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4448852909695008}
   - {fileID: 4510922983295804}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4227624097694606
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1994252374436146}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4448852909695008}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4448852909695008
@@ -115,11 +85,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1290545843935400}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.3, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4227624097694606}
+  m_Children: []
   m_Father: {fileID: 4058216073699862}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -187,8 +156,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.54, y: 0.54}
-    newSize: {x: 0.54, y: 0.54}
+    oldSize: {x: 0.31, y: 0.37}
+    newSize: {x: 0.7, y: 0.37}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -196,95 +165,16 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.046108246, y: 0.17578101}
-      - {x: -0.12904549, y: 0.14545393}
-      - {x: -0.19316101, y: 0.06922889}
-      - {x: -0.19871902, y: -0.06738973}
+      - {x: -0.08372688, y: 0.16811275}
+      - {x: -0.16294861, y: 0.114547014}
+      - {x: -0.12318802, y: -0.044730425}
+      - {x: -0.114299774, y: -0.15273571}
+      - {x: -0.24270058, y: -0.16784191}
       - {x: -0.08876419, y: -0.17867184}
       - {x: 0.0999527, y: -0.17724991}
-      - {x: 0.19857788, y: 0.013658285}
+      - {x: 0.14570618, y: -0.016553879}
       - {x: 0.16587448, y: 0.090046406}
-      - {x: 0.12431145, y: 0.17720294}
---- !u!82 &82609010600410866
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1994252374436146}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 7cf0c922b6bec4de3bc46094cfd8af4e,
-    type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
+      - {x: 0.06388855, y: 0.12433171}
 --- !u!114 &114145060499355830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -296,24 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41474f40981ff4be7a144bb505d14179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 1290545843935400}
---- !u!114 &114520725081563994
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1994252374436146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1abc0b91fe0e041f3a6321025092d3af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rateOfFire: 0.05
-  bulletSpeed: 10
-  automatic: 1
-  burst: 1
-  bullet: {fileID: 1210456358325376, guid: 96aa7bf606df2427facd541f2fc6411c, type: 2}
-  sound: {fileID: 8300000, guid: 9448ba39bca0448db905c7d51504d3ee, type: 3}
+  gunController: {fileID: 1290545843935400}
 --- !u!114 &114677594657742998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -340,49 +213,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 100
   maxSpeed: 2
-  bodySprites:
-  - {fileID: 21300000, guid: d276c839cbb724203b867c8786ace0e2, type: 3}
-  - {fileID: 21300000, guid: 4928bd0ee997f495fab412e6a6bbbbb4, type: 3}
---- !u!212 &212372657542032600
-SpriteRenderer:
+--- !u!114 &114968023114725290
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1994252374436146}
+  m_GameObject: {fileID: 1290545843935400}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 755233729
-  m_SortingLayer: 3
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: e9fcc84f3b78543bd9b0da65206506c9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6deb37b9f2cb41afbe1fcc1cba9c8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 114639608766388154, guid: 19257d32f204f4dd19fb49ace38f2217, type: 2}
+  - {fileID: 114106073278034660, guid: b0e33592b9a6b498bb499f8b9e6a8bbc, type: 2}
+  sprites:
+  - {fileID: 21300000, guid: 525c31b89e75d4172af1a07bf7d579c1, type: 3}
+  - {fileID: 21300000, guid: 54d9883092f0841c7ab70ff13b9e90a8, type: 3}
 --- !u!212 &212889712165159144
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -413,13 +260,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 755233729
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d276c839cbb724203b867c8786ace0e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97466996e1b4348dab89c7d887794408, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.54, y: 0.54}
+  m_Size: {x: 0.7, y: 0.37}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
