@@ -6,7 +6,7 @@ public abstract class DoorController : MonoBehaviour{
 	public Door[] doors;
 	protected DoorControllerCollider trigger;
 
-	void Start () {
+	public void Start () {
 		trigger = GetComponent<DoorControllerCollider> ();
 	}
 }
