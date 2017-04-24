@@ -16,6 +16,7 @@ public class GoalController : DoorController {
 	void Update () {
 		if (trigger.active && Input.GetButtonDown("Action") && !goal.activeSelf) {
 			goal.SetActive (true);
+			this.gameObject.GetComponentInChildren<Interactable> ().SetColor (Color.green);
 		}
 	}
 }
