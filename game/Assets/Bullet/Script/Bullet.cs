@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour {
 
 
 	public float damage;
+	public float kickback;
 
 	// Use this for initialization
 	void Start () {

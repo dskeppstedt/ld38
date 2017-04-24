@@ -7,7 +7,7 @@ public class Explosion : MonoBehaviour {
 
 	public GameObject explosion;
 
-	void OnTriggerEnter2D(Collider2D other) {
+	void OnCollisionEnter2D (Collision2D col){
 		GameObject exp = Instantiate (explosion);
 		exp.transform.position = this.transform.position;
 	}

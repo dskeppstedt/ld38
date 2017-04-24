@@ -15,10 +15,11 @@ public class Weapon : MonoBehaviour {
 	private bool canShoot = true;
 	private int burstLeft = 0;
 
+	GameObject player;
 
 	// Use this for initialization
 	void Start () {
-		
+		player = GameObject.FindWithTag ("Player");
 	}
 
 	// Update is called once per frame
@@ -57,8 +58,13 @@ public class Weapon : MonoBehaviour {
 		float x = Mathf.Cos (angle * Mathf.Deg2Rad);
 		float y = Mathf.Sin (angle * Mathf.Deg2Rad);
 
+		Vector2 bulletDir = new Vector2 (x, y).normalized;
+		bulletClone.GetComponent<Rigidbody2D> ().velocity = bulletDir * bulletSpeed;
 
-		bulletClone.GetComponent<Rigidbody2D> ().velocity = new Vector2 (x,y).normalized * bulletSpeed;
+
+		float kickback = bulletClone.kickback;
+		player.GetComponent<Rigidbody2D> ().AddForce (bulletDir * -kickback, ForceMode2D.Impulse);
+
 
 		burstLeft--;
 	}

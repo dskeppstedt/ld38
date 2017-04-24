@@ -52,10 +52,10 @@ GameObject:
   - component: {fileID: 4058216073699862}
   - component: {fileID: 212889712165159144}
   - component: {fileID: 50591626592281018}
+  - component: {fileID: 60538838701601026}
   - component: {fileID: 114904834326424212}
   - component: {fileID: 114145060499355830}
   - component: {fileID: 114677594657742998}
-  - component: {fileID: 60538838701601026}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1abc0b91fe0e041f3a6321025092d3af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateOfFire: 0.15
+  rateOfFire: 0.05
   bulletSpeed: 10
   automatic: 1
   burst: 1
