@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour {
 	public int burst;
 	public GameObject bullet;
 	public AudioClip sound;
+	public Sprite sprite;
 
 	// Use this for initialization
 	void Start () {

@@ -5,7 +5,6 @@ using UnityEngine;
 public class GunController : MonoBehaviour {
 
 	public Weapon[] weapons;
-	public Sprite[] sprites;
 
 	private Weapon currentWeapon;
 	private float shootTimerEnd = 0;
@@ -82,6 +81,6 @@ public class GunController : MonoBehaviour {
 
 	public void EquipWeapon(int index){
 		currentWeapon = weapons [index];
-		player.GetComponent<SpriteRenderer> ().sprite = sprites [index];
+		player.GetComponent<SpriteRenderer> ().sprite = currentWeapon.sprite;
 	}
 }

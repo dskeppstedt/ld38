@@ -4825,10 +4825,6 @@ MonoBehaviour:
   - {fileID: 114639608766388154, guid: 19257d32f204f4dd19fb49ace38f2217, type: 2}
   - {fileID: 114106073278034660, guid: b0e33592b9a6b498bb499f8b9e6a8bbc, type: 2}
   - {fileID: 114131449348330906, guid: 40b2be927a6b44ae695c9a6c7dcee9a8, type: 2}
-  sprites:
-  - {fileID: 21300000, guid: 525c31b89e75d4172af1a07bf7d579c1, type: 3}
-  - {fileID: 21300000, guid: 54d9883092f0841c7ab70ff13b9e90a8, type: 3}
-  - {fileID: 21300000, guid: 54d9883092f0841c7ab70ff13b9e90a8, type: 3}
 --- !u!114 &114833252671301764
 MonoBehaviour:
   m_ObjectHideFlags: 1
