@@ -108,7 +108,7 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &841198649
+--- !u!1001 &1536108755
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -145,6 +145,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4323815798905842, guid: 31d3eba34fc4a4bb1b1945ce0df864a9, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82490024327176668, guid: 31d3eba34fc4a4bb1b1945ce0df864a9,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82186988006669718, guid: 31d3eba34fc4a4bb1b1945ce0df864a9,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82186988006669718, guid: 31d3eba34fc4a4bb1b1945ce0df864a9,
+        type: 2}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

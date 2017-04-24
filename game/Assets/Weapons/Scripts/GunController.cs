@@ -10,12 +10,14 @@ public class GunController : MonoBehaviour {
 	private float shootTimerEnd = 0;
 	private bool canShoot = true;
 	private int burstLeft = 0;
+	private AudioSource audioSrc;
 
 	private GameObject player;
 
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag ("Player");
+		audioSrc = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -27,10 +29,18 @@ public class GunController : MonoBehaviour {
 
 			shootTimerEnd -= Time.deltaTime;
 
-			if(!currentWeapon.automatic && Input.GetMouseButtonDown(0) && canShoot){
+			if (!currentWeapon.automatic && Input.GetMouseButtonDown (0) && canShoot) {
 				burstLeft = currentWeapon.burst;
-			}else if(currentWeapon.automatic && Input.GetMouseButton(0) && canShoot){
+			} else if (currentWeapon.automatic && Input.GetMouseButton (0) && canShoot) {
+				if (!audioSrc.isPlaying) {
+					FireSFX ();
+				}
 				burstLeft = currentWeapon.burst;
+			}
+			if (currentWeapon.automatic && currentWeapon.burst < 2 && Input.GetMouseButtonUp (0)) {
+				if (audioSrc.isPlaying) {
+					audioSrc.Stop ();
+				}
 			}
 			if(shootTimerEnd <= 0){
 				canShoot = true;
@@ -58,11 +68,11 @@ public class GunController : MonoBehaviour {
 	}
 
 	void Fire(){
+		Camera.main.GetComponent<CameraFollowObject> ().Shake ();
+		FireSFX ();
 
 		canShoot = false;
 		shootTimerEnd = currentWeapon.rateOfFire;
-		GetComponent<AudioSource> ().PlayOneShot (currentWeapon.sound);
-		Camera.main.GetComponent<CameraFollowObject> ().Shake ();
 		float angle = transform.rotation.eulerAngles.z;
 		Bullet bulletClone = Instantiate(currentWeapon.bullet, transform.position,transform.rotation).GetComponent<Bullet>();
 		float x = Mathf.Cos (angle * Mathf.Deg2Rad);
@@ -71,10 +81,8 @@ public class GunController : MonoBehaviour {
 		Vector2 bulletDir = new Vector2 (x, y).normalized;
 		bulletClone.GetComponent<Rigidbody2D> ().velocity = bulletDir * currentWeapon.bulletSpeed;
 
-
 		float kickback = bulletClone.kickback;
 		player.GetComponent<Rigidbody2D> ().AddForce (bulletDir * -kickback, ForceMode2D.Impulse);
-
 
 		burstLeft--;
 	}
@@ -82,5 +90,22 @@ public class GunController : MonoBehaviour {
 	public void EquipWeapon(int index){
 		currentWeapon = weapons [index];
 		player.GetComponent<SpriteRenderer> ().sprite = currentWeapon.sprite;
+	}
+
+	void FireSFX(){
+		// Superhaxx to handle voice-stealing
+		if (currentWeapon.sound == audioSrc.clip) {
+			if (currentWeapon.burst > 1 && burstLeft < currentWeapon.burst) {
+				return;
+			}
+			if (currentWeapon.automatic && audioSrc.isPlaying) {
+				return;
+			}
+		}
+		audioSrc.Stop ();
+		audioSrc.clip = currentWeapon.sound;
+		audioSrc.loop = currentWeapon.automatic && currentWeapon.burst < 2;
+		audioSrc.time = 0f;
+		audioSrc.Play ();
 	}
 }
