@@ -27,8 +27,10 @@ public class ShowObjectsOnCollision : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		foreach(GameObject go in thingsToShow) {
-			go.SetActive (false);
+		if (other.tag == "Player") {
+			foreach (GameObject go in thingsToShow) {
+				go.SetActive (false);
+			}
 		}
 	}
 
