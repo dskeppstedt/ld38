@@ -11,7 +11,7 @@ public class StoryText : MonoBehaviour {
 
 	AudioSource audioPlayer;
 
-	string story = "Nucelar war was the apocalypse on Earth. In a bunker in the darkest of depths lies humanites only hope. A direct connection to the Moon has the ability to wake a few humans from cryo-sleep. Their only missions is to get to the awaiting space rocket. The space rocket will take them to the new world on the Moon and they will help to rebuild humankind.\n\nThere is only one problem, the path between the cryo room and the rocket launch pad has been breatched and all kinds of horrors wander these halls. Stay safe and save humanity!";
+	string story = "Nucelar war destroyed earth!\nYou have been awoken from cryosleep. Your mission is to get to the moon and help with the repopulation of the new small world.\nThere is only one problem, the path between the cryo room and the rocket launch pad has been breached and all kinds of horrors wander these halls. Stay safe and save humanity!";
 
 	// Use this for initialization
 	void Start () {

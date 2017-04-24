@@ -277,7 +277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 79.5}
+  m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &394479768
@@ -312,9 +312,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This is the games title
-
-'
+  m_Text: Insekter!!!!
 --- !u!222 &394479769
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -436,7 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textfield: {fileID: 630254090}
-  timeForChar: 0.01
+  timeForChar: 0.05
 --- !u!82 &630254093
 AudioSource:
   m_ObjectHideFlags: 0
@@ -931,7 +929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Map/main
-  delay: 1
+  delay: 4
 --- !u!4 &1471039961
 Transform:
   m_ObjectHideFlags: 0
