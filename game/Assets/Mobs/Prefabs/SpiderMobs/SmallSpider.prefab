@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 066ea30623e334287bf5e809ba9f9e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobType: 0
+  mobType: 1
   life: 35
   energy: 20
 --- !u!114 &114798005794631132
