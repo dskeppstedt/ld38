@@ -49,9 +49,9 @@ TagManager:
   - name: Props
     uniqueID: 487028561
     locked: 0
-  - name: Player
-    uniqueID: 755233729
-    locked: 0
   - name: Bullets
     uniqueID: 1148728549
+    locked: 0
+  - name: Player
+    uniqueID: 755233729
     locked: 0
