@@ -809,14 +809,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114520725081563994, guid: 8d7ec659b8776462b8eefc37a10ea234,
-        type: 2}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 1215935869536612, guid: 2faf0d39621384f7d9f51e52a3cb391d,
-        type: 2}
-    m_RemovedComponents:
-    - {fileID: 50858427314631336, guid: 8d7ec659b8776462b8eefc37a10ea234, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d7ec659b8776462b8eefc37a10ea234, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1291155625

@@ -73,7 +73,6 @@ GameObject:
   - component: {fileID: 4227624097694606}
   - component: {fileID: 212372657542032600}
   - component: {fileID: 114520725081563994}
-  - component: {fileID: 50858427314631336}
   - component: {fileID: 82609010600410866}
   m_Layer: 0
   m_Name: Pistol
@@ -157,26 +156,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!50 &50858427314631336
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1994252374436146}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &58717749432764798
 CircleCollider2D:
   m_ObjectHideFlags: 1
