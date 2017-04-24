@@ -10,5 +10,6 @@ public class SplatterSpawner : MonoBehaviour {
 		Vector2 pos = transform.position;
 		GameObject clone = Instantiate (splatterObj);
 		clone.transform.position = pos;
+		clone.GetComponent<SpriteRenderer> ().color = GetComponent<SpriteRenderer> ().color;
 	}
 }
