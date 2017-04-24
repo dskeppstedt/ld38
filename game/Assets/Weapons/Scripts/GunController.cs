@@ -62,7 +62,7 @@ public class GunController : MonoBehaviour {
 
 		canShoot = false;
 		shootTimerEnd = currentWeapon.rateOfFire;
-		currentWeapon.GetComponent<AudioSource> ().PlayOneShot (currentWeapon.sound);
+		GetComponent<AudioSource> ().PlayOneShot (currentWeapon.sound);
 		Camera.main.GetComponent<CameraFollowObject> ().Shake ();
 		float angle = transform.rotation.eulerAngles.z;
 		Bullet bulletClone = Instantiate(currentWeapon.bullet, transform.position,transform.rotation).GetComponent<Bullet>();
