@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 4848195214505862}
   - component: {fileID: 114686667631983874}
   m_Layer: 0
-  m_Name: MobSpawner
+  m_Name: BigMobSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
