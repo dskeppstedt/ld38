@@ -10,4 +10,7 @@ EditorBuildSettings:
     guid: 3aaa0b679825641efa5240118a0d0595
   - enabled: 1
     path: Assets/Map/main.unity
-    guid: 00000000000000000000000000000000
+    guid: 90cd3def6c96c4ece8f0ac10f383e35b
+  - enabled: 1
+    path: Assets/Goal/gameOver.unity
+    guid: 5de0b31068c2c4c02bbcff6d0f2aed1d
