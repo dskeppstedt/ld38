@@ -37,6 +37,8 @@ public class GunController : MonoBehaviour {
 				canShoot = true;
 			}
 		}
+
+		//cheats
 		if(Input.GetKey(KeyCode.Alpha1)){
 			EquipWeapon (0);
 		}

@@ -5,29 +5,37 @@ using UnityEngine;
 public class BuyWeaponItem : MonoBehaviour {
 
 	private bool insideCollider;
+	private GameObject player;
+
+	public void Start() {
+		player = GameObject.FindWithTag ("Player");
+
+	}
+
 
 	void Update() { 
 
 		if (insideCollider) {
-			//Can buy item lol..
-
 			if (Input.GetButtonUp ("Action")) {
-				Debug.Log("Buygin for $ " + GetComponentInParent<WeaponItemDetail>().price);
+				int price = GetComponentInParent<WeaponItemDetail> ().price;
+				int weaponId = GetComponentInParent<WeaponItemDetail> ().id;
+				player.GetComponent<Energy> ().ReduceEnergy (price);
+				player.GetComponentInChildren<GunController> ().EquipWeapon (weaponId);
 			}
-
-
-
 		}		
-
 	}
 
 
 	void OnTriggerEnter2D(Collider2D other) {
-		insideCollider = other.tag == "Player";
+		if (other.tag == "Player") {
+			insideCollider = true;
+		}	
+
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		insideCollider = !(other.tag == "Player");
+		if (other.tag == "Player") {
+			insideCollider = false;
+		}
 	}
-		
 }
